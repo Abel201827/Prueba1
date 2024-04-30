@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Página</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Contenedor donde se montará el componente React -->
-    <div id="carousel-container"></div>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <!-- Scripts de React y ReactDOM -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Título dinámico -->
+    <h1 id="titulo">Título Dinámico</h1>
 
-    <!-- Script del archivo JavaScript de tu componente React -->
+    <!-- Carrusel -->
+    <div id="carrusel" class="carrusel">
+        <div class="carrusel-item">Imagen 1</div>
+        <div class="carrusel-item">Imagen 2</div>
+        <div class="carrusel-item">Imagen 3</div>
+    </div>
+
+    <!-- Formulario -->
+    <div id="formulario" class="formulario">
+        <h2>Formulario</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Texto debajo del carrusel -->
+    <div id="texto">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ut libero placerat, a tincidunt ante venenatis. Donec non metus ullamcorper, viverra dolor nec, sollicitudin velit. Integer non bibendum nisi.</p>
+    </div>
+
+    <!-- Script de JavaScript -->
     <script src="index.js"></script>
-
-    <!-- Script para montar el componente React en el contenedor -->
-    <script>
-        // Montar el componente React en el contenedor
-        ReactDOM.render(
-            React.createElement(UncontrolledExample),
-            document.getElementById('carousel-container')
-        );
-    </script>
 </body>
 </html>
